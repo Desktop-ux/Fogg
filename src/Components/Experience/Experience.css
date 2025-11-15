@@ -1,0 +1,127 @@
+.exp {
+  width: 100%;
+  padding: 4rem 6rem;
+  color: white;
+  background: radial-gradient(circle at center, #0a0a0a, #000);
+  perspective: 1200px;
+  overflow: hidden;
+}
+
+/* Heading */
+.exp-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.elite {
+  border: none;
+  outline: none;
+  box-shadow: 0 0 1px white;
+  padding: 0.5rem 1rem;
+  background-color: rgb(40, 36, 36);
+  color: white;
+  border-radius: 5rem;
+  letter-spacing: 1px;
+}
+
+.exp-heading h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  margin: 0.5rem 0;
+}
+
+.exp-heading h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Box Container */
+.video-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Floating Box */
+.float-box {
+  width: 45%;
+  aspect-ratio: 16 / 9;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  position: relative;
+  transform: rotateX(8deg) rotateY(-5deg);
+  transform-style: preserve-3d;
+  background: linear-gradient(145deg, #1a1a1a, #0e0e0e);
+  box-shadow: 0 25px 45px rgba(255, 255, 255, 0.05),
+              inset 0 0 20px rgba(255, 255, 255, 0.05);
+  transition: box-shadow 0.5s ease;
+  will-change: transform, scale;
+  cursor: pointer;
+}
+
+.float-box:hover {
+  box-shadow: 0 35px 55px rgba(255, 255, 255, 0.15);
+}
+
+/* Image */
+.box-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+  transform: translateZ(30px);
+}
+
+/* Video */
+.box-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  opacity: 0;
+  transform: translateZ(30px);
+  transition: opacity 0.6s ease;
+  filter: brightness(0.9) contrast(1.1);
+}
+
+/* Optional reflection/glow */
+.float-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.1), transparent 70%);
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .video-wrapper {
+    flex-direction: column;
+  }
+
+  .float-box {
+    width: 90%;
+    transform: rotateX(6deg) rotateY(-3deg);
+  }
+
+  .exp-heading h1 {
+    font-size: 3rem;
+  }
+
+  .exp-heading h2 {
+    font-size: 2rem;
+  }
+}

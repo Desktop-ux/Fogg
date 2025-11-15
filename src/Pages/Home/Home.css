@@ -1,0 +1,139 @@
+.hero {
+    width: 100%;
+    padding: 2rem 6rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    padding: 5rem 0;
+}
+
+.exclusive {
+    border: none;
+    outline: none;
+    box-shadow: 0 0 1px white;
+    padding: 0.5rem 1rem;
+    background-color: rgb(40, 36, 36);
+    color: white;
+    border-radius: 5rem;
+}
+
+h1 {
+   font-weight: 500;
+
+    font-size: 5rem;
+    line-height: 1;
+}
+
+h1 span {
+    text-transform: uppercase;
+    font-weight: 200;
+}
+p{
+    color: rgb(219, 219, 219);
+    font-size: 1rem;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+
+}
+.collection{
+    background: white;
+    color: black;
+    padding: 1rem 2rem;
+    border: none;
+    outline: none;
+    font-weight: 600;
+     transition: all 0.5s ease-in-out;
+}
+.story{
+    padding: 1rem 2rem;
+    font-weight: 500;
+    color: rgba(255, 255, 0, 0.441);
+    border: 1px solid rgba(255, 217, 0, 0.408);
+    background-color: transparent;
+    border-radius: 5rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.story:hover{
+    background: white;
+    color: black;
+    border: none;
+}
+.collection:hover{
+        color: rgba(255, 255, 0, 0.441);
+    border: 1px solid rgba(255, 217, 0, 0.408);
+    background-color: transparent;
+}
+/* Right Section Setup */
+.right {
+  position: relative;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+
+/* Wrapper to hold Orb + Card */
+.card-wrapper {
+  position: relative;
+  display: grid;          /* centers and stacks both elements */
+  place-items: center;    /* perfectly center both horizontally + vertically */
+  box-shadow: 0 0 80px rgba(255, 255, 255, 0.138);
+}
+
+/* Orb behind the card */
+/* .orbit {
+  position: absolute;
+  z-index: 1;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 180deg,
+    #00d4ff,
+    #7b2fff,
+    #ff0099,
+    #00d4ff
+  );
+  filter: blur(60px);
+  opacity: 0.9;
+  animation: hueShift 8s linear infinite;
+  box-shadow: 0 0 80px rgba(155, 80, 255, 0.3);
+} */
+
+
+
+/* Card in front of the orb */
+.tilted-card {
+  position: absolute;
+  z-index: 2;
+ 
+}
+
+/* Optional: subtle glow pulse animation */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
