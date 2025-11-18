@@ -4,6 +4,7 @@ import TiltedCard from '../../TiltedCard.jsx'
 import mockup from '/src/assets/images/mockup.png'
 import Orb from '../../Orb.jsx'
 import Experience from '@/Components/Experience/Experience'
+import Collection from '@/Components/Collection/Collection'
 
 const Home = () => {
   return (<>
@@ -44,6 +45,7 @@ const Home = () => {
       </div>
     </div>
     <Experience />
+    <Collection /> 
   </>
    
   )

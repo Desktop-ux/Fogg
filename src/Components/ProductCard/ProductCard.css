@@ -1,0 +1,114 @@
+.card {
+    width: 100%;
+    border: 1px solid yellow;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.product {
+    width: 35vw;
+    height: 25vw;
+    background-color: skyblue;
+}
+
+.product_details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.product_details h2 {
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.product_details p {
+    text-align: left;
+    font-size: 0.85rem;
+}
+
+.product_details .price {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.product_details .price p,
+.product_details .price span {
+    margin: 0;
+}
+
+.product_details .price p {
+    font-size: 2rem;
+    color: white;
+}
+
+.product_details .price span {
+    font-size: 1rem;
+    text-decoration: line-through;
+    color: rgb(170, 170, 170);
+}
+
+.discount {
+    margin: 0;
+    background-color: red;
+    padding: 0.15rem 0.5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.select {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.select p {
+    font-size: 1rem;
+}
+
+.cart_section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    background-color: transparent;
+}
+
+.add {
+    background: white;
+    color: black;
+    padding: 1rem 2rem;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    transition: all 0.5s ease-in-out;
+}
+
+.add:hover {
+    color: rgba(255, 255, 0, 0.647);
+    border: 1px solid rgba(255, 217, 0, 0.408);
+    background-color: transparent;
+}
+
+.learn {
+    padding: 1rem 2rem;
+    font-weight: 500;
+    color: rgba(255, 255, 0, 0.441);
+    border: 1px solid rgba(255, 217, 0, 0.408);
+    background-color: transparent;
+    border-radius: 5rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.learn:hover{
+     background: white;
+    color: black;
+    border: none;
+}
