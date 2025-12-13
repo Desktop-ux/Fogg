@@ -5,6 +5,7 @@ import mockup from '/src/assets/images/mockup.png'
 import Orb from '../../Orb.jsx'
 import Experience from '@/Components/Experience/Experience'
 import Collection from '@/Components/Collection/Collection'
+import Faqs from '@/Components/Faqs/Faqs'
 
 const Home = () => {
   return (<>
@@ -46,6 +47,7 @@ const Home = () => {
     </div>
     <Experience />
     <Collection /> 
+    <Faqs />
   </>
    
   )

@@ -34,7 +34,7 @@ const variants = {
         id: "green",
         cardimg: green_card,
         name: "Emerald Rush",
-        accent: "#22C55E",
+        accent: "#05472A",
         badgeColor: "#86EFAC",
         price: 279,
         oldPrice: 349,
