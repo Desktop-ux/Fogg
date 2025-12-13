@@ -59,7 +59,7 @@
 .product_details .price {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
+    gap: 1rem;
 }
 
 .product_details .price p,
@@ -80,8 +80,8 @@
 
 .discount {
     margin: 0;
-    background-color: rgb(205, 1, 1);
-    padding: 0.15rem 0.5rem;
+    background-color: var(--badge-bg);
+    padding: 0.25rem 0.75rem;
     border-radius: 1rem;
     display: flex;
     align-items: center;

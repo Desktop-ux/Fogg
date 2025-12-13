@@ -11,19 +11,30 @@ nav {
   top: 0;
 }
 
+
 .logo {
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-shrink: 0;
+  isolation: isolate;
 }
 
 .logo img {
-  height: 3rem;
+  width: clamp(60px, 6vw, 90px);
+  height: auto;
+  min-width: 60px;
+  image-rendering: auto;
 }
+
+
+
+
+
 
 /* Navigation Links */
 .links {
-  position: relative; /* for underline positioning */
+  position: relative;
+  /* for underline positioning */
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -34,8 +45,8 @@ nav {
 .underline {
   position: absolute;
   bottom: 10px;
-  height: 2px;
-  background-color: #ededed;
+  height: 5px;
+  background-color: rgba(204, 204, 204, 0.785);
   border-radius: 2px;
   transition: all 0.3s ease;
   width: 0;
@@ -75,9 +86,10 @@ nav {
   justify-content: center;
   padding: 0.5rem 1rem;
   color: black;
-  font-size: 1rem; 
+  font-size: 1rem;
   text-transform: uppercase;
 }
+
 .cart p {
   color: black;
 }
