@@ -15,7 +15,7 @@ const ProductCard = () => {
             </div>
             <div className="select">
                 <p>Select Fragnance</p>
-
+                
             </div>
             <div className="cart_section">
                 <button className='add'>Add to Cart</button>
