@@ -1,7 +1,8 @@
 import React from 'react'
 import './Reviews.css'
+import ReviewCard from '../ReviewCard/ReviewCard'
 
-const reviews = [
+const reviews_data = [
   {
     name: "Amit Verma",
     profession: "Marketing Professional",
@@ -26,10 +27,19 @@ const Reviews = () => {
   return (
     <div className='about_review'>
         <h1>What Our <span>Clients Say</span></h1>
-        <div class="lux-line-red"></div>
+        <div className="lux-line-red"></div>
 
         <div className='review_cards'>
-            
+            {reviews_data.map((review, index)=>{
+             return  ( <ReviewCard key={index} name = {review.name} profession={review.profession} reviewText={review.review}/>)
+            })}
+          
+        </div>
+
+        <div className="explore_collection">
+            <h2>Experience <span>Fogg Collection</span></h2>
+            <p>Join thousands of satisfied customers who have made the <span>FOGG</span>their elite scent</p>
+            <button className='explore_btn' >Explore Collection</button>
         </div>
     </div>
   )

@@ -1,4 +1,4 @@
-.about_review{
+.about_review {
     width: 100%;
     margin: 5rem 0;
     display: flex;
@@ -6,7 +6,52 @@
     align-items: center;
 }
 
-.about_review h1{
+.about_review h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+}
+
+.review_cards {
+    margin: 4rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.explore_collection {
+    margin-top: 2rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+}
+.explore_collection h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+}
+.explore_collection h2 span {
+    font-style: italic;
+}
+
+.explore_collection p {
+    font-size: 1rem;
+    text-align: center;
+    color: rgb(159, 159, 159);
+}
+.explore_collection p span {
+    font-style: italic;
+}
+
+.explore_btn{
+    padding: 1rem 1rem;
+    color: black;
+    background-color: white;
+    width: 100%;
+    font-weight: 700;
 }

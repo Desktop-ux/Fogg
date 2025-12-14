@@ -37,7 +37,7 @@
 
 .about_head{
      font-size: 1rem;
-    color: rgb(164, 162, 162);
+    color: rgb(181, 181, 181);
     
     text-transform: uppercase;
 }
@@ -47,13 +47,14 @@
     font-weight: 400;
     text-align: center;
     /* margin-top: 0.5rem; */
+    color: #ffffff;
 }
 
 .about_main span{
       font-weight: 200;
     font-style: italic;
     font-size: 2rem;
-    color: #d5d5d5;
+    color: #c5c5c5;
 }
 
 .about_text{
