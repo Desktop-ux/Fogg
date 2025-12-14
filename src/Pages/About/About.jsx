@@ -2,6 +2,7 @@ import React from 'react'
 import './About.css'
 import Footer from '@/Components/Footer/Footer'
 import logo_white from '../../Assets/images/logo_white.png'
+import AboutStory from '@/Components/AboutStory/AboutStory'
 
 const About = () => {
   return (
@@ -17,7 +18,7 @@ const About = () => {
           <span>Exquisite Fragnances</span></h2>
         <p className='about_text'>Every Bottle tells a story of passion, artistry, and the relentless pursuit of olfactory <br />perfection</p>
       </div>
-      
+      <AboutStory />
       <Footer />
     </div>
   )

@@ -8,6 +8,8 @@ import instagram from '../../Assets/images/social_icons/insta.png'
 
 import { Link } from 'react-router-dom'
 
+
+
 const Footer = () => {
   return (
     <div className='footer'>
