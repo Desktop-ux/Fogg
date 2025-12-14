@@ -7,6 +7,7 @@ import Home from './Pages/Home/Home';
 import Orb from './Orb';
 import GhostCursor from './GhostCursor'
 import ClickSpark from './ClickSpark';
+import About from './Pages/About/About';
 
 const App = () => {
   useEffect(() => {
@@ -42,6 +43,7 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
         </Routes>
       </ClickSpark>
 
