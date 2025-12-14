@@ -1,6 +1,7 @@
 import React from 'react'
 import './AboutStory.css'
 import story_img from '../../Assets/images/story_img.jpg'
+import Counter from '../Counter/Counter'
 
 const AboutStory = () => {
     return (
@@ -11,11 +12,29 @@ const AboutStory = () => {
             </div>
             <div className="story_section">
                 <div className="story_content">
-                    <p>Born from a vision to redefine everyday freshness, FOGG was created for those who believe confidence begins with how you feel. From the very start, the brand focused on delivering long-lasting fragrances that make a bold statement without saying a word.</p>
-                    <p>FOGG’s journey is built on innovation and performance. Every fragrance is carefully developed using advanced formulation techniques to ensure intensity, consistency, and endurance throughout the day. It’s not just about smelling good — it’s about staying fresh, no matter where life takes you.</p>
-                   <p> With a wide range of signature variants, FOGG reflects modern individuality and dynamic lifestyles. Each bottle represents precision, research, and a commitment to quality that resonates with millions of users across the country.
-                    </p>
-                    <p>Today, FOGG stands as a symbol of power, freshness, and reliability — a fragrance choice trusted by those who demand more from their everyday essentials.</p>
+                    <div className="story_text">
+                        <p>Born from a vision to redefine everyday freshness, FOGG was created for those who believe confidence begins with how you feel. From the very start, the brand focused on delivering long-lasting fragrances that make a bold statement without saying a word.</p>
+                        <p>FOGG’s journey is built on innovation and performance. Every fragrance is carefully developed using advanced formulation techniques to ensure intensity, consistency, and endurance throughout the day. It’s not just about smelling good — it’s about staying fresh, no matter where life takes you.</p>
+                        <p> With a wide range of signature variants, FOGG reflects modern individuality and dynamic lifestyles. Each bottle represents precision, research, and a commitment to quality that resonates with millions of users across the country.
+                        </p>
+                        <p>Today, FOGG stands as a symbol of power, freshness, and reliability — a fragrance choice trusted by those who demand more from their everyday essentials.</p>
+                    </div>
+                    <div className="fogg_data">
+                        <div className="data">
+                            <Counter end={50} />  {/* 50+ customers */}
+                            <p>Satisfied <br /> Cutomers</p>
+                        </div>
+                        <div className="data">
+                            <Counter end={4} />    {/* 4+ years */}
+                            <p>Years OF<br />Experience</p>
+                        </div>
+                        <div className="data">
+                             <Counter end={12} />   {/* 12 fragrances */}
+                             <p>Fogg <br />Fragnances</p>
+                        </div>
+                       
+                        
+                    </div>
                 </div>
                 <div className="story_image">
                     <div className="story_img_container">
