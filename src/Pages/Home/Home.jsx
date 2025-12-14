@@ -6,6 +6,7 @@ import Orb from '../../Orb.jsx'
 import Experience from '@/Components/Experience/Experience'
 import Collection from '@/Components/Collection/Collection'
 import Faqs from '@/Components/Faqs/Faqs'
+import Footer from '@/Components/Footer/Footer'
 
 const Home = () => {
   return (<>
@@ -48,6 +49,7 @@ const Home = () => {
     <Experience />
     <Collection /> 
     <Faqs />
+    <Footer/>
   </>
    
   )
