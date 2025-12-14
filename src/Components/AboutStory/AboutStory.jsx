@@ -21,19 +21,23 @@ const AboutStory = () => {
                     </div>
                     <div className="fogg_data">
                         <div className="data">
-                            <Counter end={50} />  {/* 50+ customers */}
+                            <Counter end={50} duration={2} />
+                              {/* 50+ customers */}
                             <p>Satisfied <br /> Cutomers</p>
                         </div>
                         <div className="data">
-                            <Counter end={4} />    {/* 4+ years */}
+                            
+                           <Counter end={4} duration={1} />
+                          
+                              {/* 4+ years */}
                             <p>Years OF<br />Experience</p>
                         </div>
                         <div className="data">
-                             <Counter end={12} />   {/* 12 fragrances */}
-                             <p>Fogg <br />Fragnances</p>
+                            <Counter end={12} duration={2} />  {/* 12 fragrances */}
+                            <p>Fogg <br />Fragnances</p>
                         </div>
-                       
-                        
+
+
                     </div>
                 </div>
                 <div className="story_image">

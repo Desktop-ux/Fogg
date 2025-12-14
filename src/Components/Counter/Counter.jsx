@@ -1,24 +1,35 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export default function Counter({ end, duration = 2000 }) {
+gsap.registerPlugin(ScrollTrigger);
+
+export default function Counter({ end, duration = 2 }) {
   const [count, setCount] = useState(0);
+  const counterRef = useRef(null);
 
   useEffect(() => {
-    let start = 0;
-    const increment = end / (duration / 16);
+    const obj = { val: 0 };
 
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= end) {
-        setCount(end);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
-      }
-    }, 16);
+    const tween = gsap.to(obj, {
+      val: end,
+      duration,
+      ease: "power1.out",
+      scrollTrigger: {
+        trigger: counterRef.current,
+        start: "top 80%",
+        // once: true,
+        
+      },
+      onUpdate: () => {
+        setCount(Math.floor(obj.val));
+      },
+    });
 
-    return () => clearInterval(timer);
+    return () => {
+      tween.kill();
+    };
   }, [end, duration]);
 
-  return <span>{count}K+</span>;
+  return <span ref={counterRef}>{count}K+</span>;
 }

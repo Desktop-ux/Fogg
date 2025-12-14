@@ -15,7 +15,7 @@
     justify-content: center;
     padding: 2rem 6rem;
     width: 100%;
-    
+   
 }
 
 .logo_about img{
@@ -62,4 +62,8 @@
     text-align: center;
     /* margin-top: 0.5rem; */
     font-weight: 300;
+}
+
+.story_section{
+    margin: 2rem 0;
 }
