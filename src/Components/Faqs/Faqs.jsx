@@ -96,6 +96,12 @@ const Faqs = () => {
        }
     </div>
      
+     <div className="enquiry">
+       <h2 className="more_ques">Still Have Questions?</h2>
+       <p>Our ELite Fragnance experts are here to help you find the perfect <br />
+       scent or answer any questions about your collections.</p>
+       <button className="contact_support">Contact Support</button>
+     </div>
     </div>
   )
 }
