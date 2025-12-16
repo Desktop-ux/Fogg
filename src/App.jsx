@@ -8,6 +8,7 @@ import Orb from './Orb';
 import GhostCursor from './GhostCursor'
 import ClickSpark from './ClickSpark';
 import About from './Pages/About/About';
+import Products from './Pages/Products/Products';
 
 const App = () => {
   useEffect(() => {
@@ -39,11 +40,12 @@ const App = () => {
         sparkCount={8}
         duration={400}
       >
-        {/* Your content here */}
+       
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
+          <Route path='/products' element={<Products />} />
         </Routes>
       </ClickSpark>
 

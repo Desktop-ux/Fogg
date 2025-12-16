@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import "./Experience.css";
 
@@ -10,6 +10,68 @@ import fogg2 from "/src/assets/images/fogg2.mp4";
 
 const Experience = () => {
   const boxRefs = useRef([]);
+  const exphead = useRef(null);
+  const videoRefs = useRef([]);
+
+  // Experience Head animation
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(exphead.current.children, {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: "power3.out",
+         scrollTrigger: {
+          trigger: exphead.current,
+          start: "top 80%",
+          end: "bottom 25%",
+         markers: false,
+          scrub: 1,
+        },
+      });
+    }, exphead);
+
+    return () => ctx.revert();
+  }, []);
+
+  //video 1 animation
+  useLayoutEffect(()=>{
+    const ctx = gsap.context(()=>{
+      gsap.from(boxRefs.current[0], {
+        x: -100,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+         scrollTrigger: {
+          trigger: boxRefs.current[0],
+          start: "top 100%",
+          end: "bottom 60%",
+          markers: false,
+          scrub: 1,
+        },
+      });
+    })
+    return () => ctx.revert(); 
+  }, [])
+  useLayoutEffect(()=>{
+    const ctx = gsap.context(()=>{
+      gsap.from(boxRefs.current[1], {
+        x: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+         scrollTrigger: {
+          trigger: boxRefs.current[0],
+          start: "top 100%",
+          end: "bottom 60%",
+          markers: false,
+          scrub: 1,
+        },
+      });
+    })
+    return () => ctx.revert(); 
+  }, [])
 
   // Floating animation
   useEffect(() => {
@@ -70,7 +132,7 @@ const Experience = () => {
 
   return (
     <div className="exp">
-      <div className="exp-heading">
+      <div className="exp-heading" ref={exphead}>
         <button className="elite">Elite Edition</button>
         <h1>Experience</h1>
         <h2>Luxury</h2>
@@ -96,6 +158,7 @@ const Experience = () => {
               loop
               preload="auto"
               className="box-video"
+              ref={(el) => (videoRefs.current[i] = el)}
             ></video>
           </div>
         ))}

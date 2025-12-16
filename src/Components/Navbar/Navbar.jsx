@@ -53,7 +53,7 @@ const Navbar = () => {
         {[
           { path: "/", label: "Home" },
           { path: "/about", label: "About Us" },
-          { path: "/services", label: "Products" },
+          { path: "/products", label: "Products" },
           { path: "/login", label: "Log In" },
           { path: "/wishlist", label: "Wishlist" },
         ].map((item, index) => (
