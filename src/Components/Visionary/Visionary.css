@@ -1,0 +1,61 @@
+.visionary{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 6rem;
+}
+
+.vision_head{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.vision_head span{
+   font-style:italic ;
+    font-weight: 200;
+}
+
+.visionary_container{
+    width: 35vw;
+    height: 35vw;
+    background-color: #181818;  
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.founder{
+   
+    width: 10vw;
+    height: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #474747;
+    border-radius: 50%;
+    border: none;
+
+}
+.founder img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.visionary_container h3{
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.visionary_container p{
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    font-weight: 200;
+    text-align: center;
+    line-height: 1.2rem;
+}

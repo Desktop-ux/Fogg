@@ -29,6 +29,8 @@ const Reviews = () => {
         <h1>What Our <span>Clients Say</span></h1>
         <div className="lux-line-red"></div>
 
+       
+
         <div className='review_cards'>
             {reviews_data.map((review, index)=>{
              return  ( <ReviewCard key={index} name = {review.name} profession={review.profession} reviewText={review.review}/>)

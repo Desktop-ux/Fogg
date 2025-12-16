@@ -4,6 +4,7 @@ import Footer from '@/Components/Footer/Footer'
 import logo_white from '../../Assets/images/logo_white.png'
 import AboutStory from '@/Components/AboutStory/AboutStory'
 import Reviews from '@/Components/Reviews/Reviews'
+import Visionary from '@/Components/Visionary/Visionary'
 
 const About = () => {
   return (
@@ -22,6 +23,7 @@ const About = () => {
       <div className="story_section">
         <AboutStory />
       </div>
+      <Visionary />
       <Reviews />
       <Footer />
     </div>
