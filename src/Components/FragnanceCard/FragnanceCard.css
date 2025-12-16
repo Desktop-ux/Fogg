@@ -1,0 +1,104 @@
+.fragnanceCard {
+    width: 22vw;
+    height: 25vw;
+    background: #040429;
+    background: linear-gradient(90deg, rgba(4, 4, 41, 1) 0%, rgba(18, 18, 54, 1) 41%, rgba(0, 0, 0, 1) 100%);
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+}
+
+.fragnance_category {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.circle {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background-color: rgb(5, 149, 58);
+}
+
+.frag_cat {
+    padding: 0.15rem 0.55rem;
+    background-color: rgb(5, 147, 114);
+    border-radius: 1rem;
+}
+
+.frag_bottle {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frag_detail {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.frag_detail h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.frag_detail p {
+    font-size: 0.75rem;
+    font-weight: 300;
+}
+
+.frag_price {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+p.new_frag_price {
+    font-size: 1.5rem;
+    color: white;
+}
+
+p.old_frag_price {
+    font-size: 1rem;
+    color: rgb(148, 148, 148);
+    text-decoration: line-through;
+}
+
+.frag_actions {
+    margin-top: 0.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+button.addToCart {
+    width: 80%;
+    background-color: white;
+    color: black;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    font-weight: 700;
+}
+
+.wishlist_btn {
+    width: 3vw;
+    height: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: black;
+}
