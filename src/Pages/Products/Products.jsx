@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Products.css'
 import FragnanceCard from '@/Components/FragnanceCard/FragnanceCard';
 
@@ -36,7 +36,7 @@ import Noir_Absolu from "/src/assets/French/Noir Absolu.png"
 import Ver_Noble from "/src/assets/French/Vert Noble.png"
 
 
-const categories = ["All", "Attar", "Perfume", "Roll ONs", "French", "Arabia"];
+const categories = ["All", "Attar", "Perfumes", "RollOns", "French", "Arabia"];
 
 const Attar = {
   attar1: {
@@ -129,7 +129,7 @@ const RollOns = {
     car_badge: "#133569",
     new_price: "$109",
     old_price: "$149",
-    category: "Roll On",
+    category: "RollOns",
   },
   r2: {
     id: 2,
@@ -140,7 +140,7 @@ const RollOns = {
     car_badge: "#133569",
     new_price: "$89",
     old_price: "$139",
-    category: "Roll On",
+    category: "RollOns",
   },
   r3: {
     id: 3,
@@ -151,7 +151,7 @@ const RollOns = {
     car_badge: "#133569",
     new_price: "$125",
     old_price: "$169",
-    category: "Roll On",
+    category: "RollOns",
   },
   r4: {
     id: 4,
@@ -162,7 +162,7 @@ const RollOns = {
     car_badge: "#133569",
     new_price: "$155",
     old_price: "$169",
-    category: "Roll On",
+    category: "RollOns",
   },
   r5: {
     id: 5,
@@ -173,7 +173,7 @@ const RollOns = {
     car_badge: "#133569",
     new_price: "$135",
     old_price: "$179",
-    category: "Roll On",
+    category: "RollOns",
   },
   r6: {
     id: 6,
@@ -184,11 +184,11 @@ const RollOns = {
     car_badge: "#133569",
     new_price: "$180",
     old_price: "$209",
-    category: "Roll On",
+    category: "RollOns",
   }
 }
 
-const perfumes = {
+const Perfumes = {
   p1: {
     id: 1,
     roll_img: var_green,
@@ -338,7 +338,7 @@ const French = {
     old_price: "$219",
     category: "French",
   },
-  f4:{
+  f4: {
     id: 4,
     roll_img: Ambre_Précieux,
     roll_name: "FOGG Ambre Précieux",
@@ -349,8 +349,8 @@ const French = {
     old_price: "$219",
     category: "French",
   },
-  f5:{
-        id: 5,
+  f5: {
+    id: 5,
     roll_img: Noir_Absolu,
     roll_name: "FOGG Noir Absolu",
     descp: "A deep, intense scent crafted for bold presence and lasting impact.",
@@ -362,8 +362,22 @@ const French = {
   }
 }
 
-const Products = () => {
 
+const AllFrags = [
+  ...Object.values(Attar),
+  ...Object.values(RollOns),
+  ...Object.values(Perfumes),
+  ...Object.values(Arabia),
+  ...Object.values(French)
+]
+
+
+const Products = () => {
+  const [ActiveCat, setActiveCat] = useState("All")
+
+  const visibleFragnances = ActiveCat === "All" ? AllFrags : AllFrags.filter(
+    item => item.category === ActiveCat
+  )
 
   return (
     <div className='products-page'>
@@ -382,23 +396,26 @@ const Products = () => {
       <div className="product_categories">
         {
           categories.map((category, index) => (
-            <button key={index} className="category_button">{category}</button>
+            <button key={index} onClick={() => setActiveCat(category)} className={`category_button ${
+        ActiveCat === category ? "active" : ""
+      }`}>{category}</button>
           ))
         }
       </div>
       <div className="fragnances_card_container">
-        {Object.values(Attar).map((attar, index) => {
-          return (
-            <FragnanceCard
-              key={attar.id}
-              fragImg={attar.attar_img}
-              name={attar.attar_name}
-              descp={attar.descp}
-              newPrice={attar.new_price}
-              oldPricw={attar.old_price}
-              category={attar.category}
-            />)
-        })}
+        {
+          Object.values(visibleFragnances).map(item => {
+         return   <FragnanceCard
+              key={`${item.category}-${item.id}`}
+              fragImg={item.attar_img || item.roll_img}
+              name={item.attar_name || item.roll_name}
+              descp={item.descp}
+              newPrice={item.new_price}
+              oldPrice={item.old_price}
+
+            />
+          })
+        }
       </div>
     </div>
   )

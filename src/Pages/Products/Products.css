@@ -76,11 +76,26 @@
     border: 1px solid #fff;
     font-size: 1rem;
     border-radius: 2rem;
+    transition: 0.5s all ease-in-out;
+}
+
+.category_button.active {
+ background-color: white;
+  color: black;
+  font-weight: 700;
+  border: none;
+  /* box-shadow: 0 0 18px rgba(0,114,255,0.6); */
 }
 
 .category_button:active{
     background-color: #fff;
     color: #000;
+}
+
+.category_button:hover{
+    background-color: #fff;
+    color: #000;
+    font-weight: 700;
 }
 
 
