@@ -9,6 +9,8 @@ import GhostCursor from './GhostCursor'
 import ClickSpark from './ClickSpark';
 import About from './Pages/About/About';
 import Products from './Pages/Products/Products';
+import LogIn from "./Pages/LogIn/LogIn"
+
 
 const App = () => {
   useEffect(() => {
@@ -46,6 +48,7 @@ const App = () => {
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/products' element={<Products />} />
+          <Route path='/login' element={<LogIn />} />
         </Routes>
       </ClickSpark>
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Products.css'
 import FragnanceCard from '@/Components/FragnanceCard/FragnanceCard';
+import Footer from '@/Components/Footer/Footer';
 
 import BlueWave from "/src/assets/Attar/Blue Wave.png"
 import CrimsonSpice from "/src/assets/Attar/Crimson Spice.png"
@@ -408,15 +409,18 @@ const Products = () => {
          return   <FragnanceCard
               key={`${item.category}-${item.id}`}
               fragImg={item.attar_img || item.roll_img}
+              category={item.category}
               name={item.attar_name || item.roll_name}
               descp={item.descp}
               newPrice={item.new_price}
               oldPrice={item.old_price}
-
+              dot_color ={item.dot_color}
+              car_badge = {item.car_badge}
             />
           })
         }
       </div>
+      <Footer/>
     </div>
   )
 }
