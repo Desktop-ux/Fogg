@@ -22,7 +22,7 @@ const LoginCard = () => {
         <div className="forget">
           <p>Forget Password?</p>
         </div>
-
+ 
       </div>
       <button className="login_btn">Login</button>
     </div>

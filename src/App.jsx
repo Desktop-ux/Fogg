@@ -10,6 +10,7 @@ import ClickSpark from './ClickSpark';
 import About from './Pages/About/About';
 import Products from './Pages/Products/Products';
 import LogIn from "./Pages/LogIn/LogIn"
+import Wishlist from './Pages/Wishlist/Wishlist';
 
 
 const App = () => {
@@ -49,6 +50,7 @@ const App = () => {
           <Route path='/about' element={<About />} />
           <Route path='/products' element={<Products />} />
           <Route path='/login' element={<LogIn />} />
+          <Route path='/wishlist' element={<Wishlist />} />
         </Routes>
       </ClickSpark>
 

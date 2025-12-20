@@ -17,6 +17,7 @@
     background: #15151c;
     background: linear-gradient(90deg, rgb(0, 4, 7) 0%, rgba(8, 1, 1, 1) 40%, rgba(0, 0, 0, 1) 100%);
     border-radius: 2rem;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
 }
 
 .loginImg {
