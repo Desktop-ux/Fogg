@@ -1,11 +1,33 @@
-import React from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import './AboutStory.css'
 import story_img from '../../Assets/images/story_img.jpg'
 import Counter from '../Counter/Counter'
+import gsap from 'gsap'
 
 const AboutStory = () => {
+    const aboutStoryref = useRef(null)
+
+      useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(aboutStoryref.current, {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: aboutStoryref.current,
+          start: "top 100%",
+          end: "bottom 60%",
+          markers: false,
+          scrub: 1,
+        },
+      });
+    })
+     return () => ctx.revert(); 
+  }, [])
+
     return (
-        <div className='about_story'>
+        <div className='about_story' ref={aboutStoryref}>
             <div className="story_head">
                 <h1>Fragrance That Tells a Story</h1>
                 <div class="lux-line-red"></div>
@@ -22,14 +44,14 @@ const AboutStory = () => {
                     <div className="fogg_data">
                         <div className="data">
                             <Counter end={50} duration={2} />
-                              {/* 50+ customers */}
+                            {/* 50+ customers */}
                             <p>Satisfied <br /> Cutomers</p>
                         </div>
                         <div className="data">
-                            
-                           <Counter end={4} duration={1} />
-                          
-                              {/* 4+ years */}
+
+                            <Counter end={4} duration={1} />
+
+                            {/* 4+ years */}
                             <p>Years OF<br />Experience</p>
                         </div>
                         <div className="data">
@@ -47,8 +69,6 @@ const AboutStory = () => {
                     </div>
                 </div>
             </div>
-
-
         </div>
     )
 }

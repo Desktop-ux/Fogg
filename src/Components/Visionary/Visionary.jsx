@@ -1,11 +1,33 @@
-import React from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import './Visionary.css'
 import founder_image from '../../Assets/images/fog_founder.png'
+import gsap from 'gsap'
 
 const Visionary = () => {
+  const visionref = useRef(null)
+
+    useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(visionref.current, {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: visionref.current,
+          start: "top 100%",
+          end: "bottom 60%",
+          markers: false,
+          scrub: 1,
+        },
+      });
+    })
+     return () => ctx.revert(); 
+  }, [])
+
     return (
 
-        <div className="visionary">
+        <div className="visionary" ref={visionref} >
             <div className="visionary_head">
                 <h1 className="vision_head">Meet the <span>Visionary</span> </h1>
                 <div className="lux-line-red"></div>

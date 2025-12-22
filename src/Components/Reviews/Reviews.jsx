@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import './Reviews.css'
 import ReviewCard from '../ReviewCard/ReviewCard'
+import gsap from 'gsap';
+
 
 const reviews_data = [
   {
@@ -24,8 +26,70 @@ const reviews_data = [
 ];
 
 const Reviews = () => {
+   const sectionRef = useRef(null)
+
+   
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+
+      // Heading
+      gsap.from(".about_review h1", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".about_review",
+          start: "top 75%",
+          end: "top 40%",
+        }
+      })
+
+      // Divider line
+      gsap.from(".lux-line-red", {
+        scaleX: 0,
+        transformOrigin: "left",
+        duration: 0.6,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".about_review",
+          start: "top 75%",
+        }
+      })
+
+      // Review cards
+      gsap.from(".review_cards > div", {
+        y: 60,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.25,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".review_cards",
+          start: "top 80%",
+          end: "bottom 40%",
+        }
+      })
+
+      // CTA
+      gsap.from(".explore_collection", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".explore_collection",
+          start: "top 85%",
+        }
+      })
+
+    }, sectionRef)
+
+    return () => ctx.revert()   // 🔥 CLEANUP
+  }, [])
+
   return (
-    <div className='about_review'>
+    <div className='about_review' ref={sectionRef}>
         <h1>What Our <span>Clients Say</span></h1>
         <div className="lux-line-red"></div>
 
