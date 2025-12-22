@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./FragnanceCard.css"
+import { useAspect } from '@react-three/drei'
 
 const FragnanceCard = ({ name, descp, newPrice, oldPricw, category, fragImg, dot_color, car_badge }) => {
+
+    const [isWishlisted, setIsWishListed] = useState(false)
+
+    const toggleWishlisted = () => {
+        setIsWishListed(!isWishlisted)
+    }
+
     return (
         <div className='fragnanceCard'>
             <div className="fragnance_category">
@@ -30,7 +38,12 @@ const FragnanceCard = ({ name, descp, newPrice, oldPricw, category, fragImg, dot
                 {/* <i class="fa-regular fa-heart"></i> */}
                 <div className="frag_actions">
                     <button className="addToCart">Add to Cart</button>
-                    <div className="wishlist_btn"><i class="fa-regular fa-heart"></i></div>
+                    <div className="wishlist_btn" onClick={toggleWishlisted}>
+                        <i
+                            className={isWishlisted ? "fa-solid fa-heart" : "fa-regular fa-heart"}
+                            style={{ color: isWishlisted ? "red" : "#aaa" }}
+                        ></i>
+                    </div>
                 </div>
             </div>
         </div>

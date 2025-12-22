@@ -50,6 +50,7 @@
     gap: 2rem ;
     margin-top: 3rem;
     padding: 1rem;
+    margin-bottom: 1rem;
 }
 
 button.to_cart{
@@ -61,6 +62,36 @@ button.to_cart{
 
 .remove_wishlist{
     padding: 0.5rem 1rem ;
-    background-color: rgb(139, 4, 4);
+    background-color: rgb(4, 31, 139);
     color: white;
+}
+
+
+.your_wishlist{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    padding: 1rem 0.5rem;
+}
+
+.your_wishlist_head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+
+}
+
+.your_wishlist_head h2{
+    font-size: 2.5rem;
+}
+
+.your_wishlist_container{
+    width: 100%;
+    height: 50vb;
+    background-color: #02348b;
+    margin: 2rem 0;
 }

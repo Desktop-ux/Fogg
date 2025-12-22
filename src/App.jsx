@@ -11,6 +11,7 @@ import About from './Pages/About/About';
 import Products from './Pages/Products/Products';
 import LogIn from "./Pages/LogIn/LogIn"
 import Wishlist from './Pages/Wishlist/Wishlist';
+import ScrollToTop from "./ScrollToTop";
 
 
 const App = () => {
@@ -43,8 +44,11 @@ const App = () => {
         sparkCount={8}
         duration={400}
       >
+        
+         <Navbar />
+        <ScrollToTop/>
        
-        <Navbar />
+       
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
