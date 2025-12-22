@@ -1,18 +1,39 @@
-import React from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import './Footer.css'
 import logo_white from '../../Assets/images/logo_white.png'
 import twitter from '../../Assets/images/social_icons/twitter.png'
 import Github from '../../Assets/images/social_icons/github.png'
 import linkedin from '../../Assets/images/social_icons/linkedin.png'
 import instagram from '../../Assets/images/social_icons/insta.png'
-
+import gsap from 'gsap'
 import { Link } from 'react-router-dom'
 
 
 
 const Footer = () => {
+  const footerref = useRef(null)
+
+    useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(footerref.current, {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: footerref.current,
+          start: "top 100%",
+          end: "bottom 60%",
+          markers: false,
+          scrub: 1,
+        },
+      });
+    })
+    return () => ctx.revert();
+  }, [])
+
   return (
-    <div className='footer'>
+    <div className='footer' ref={footerref}>
         <div className="fogg_footer">
            <div className="logo_anime">
             FOGG

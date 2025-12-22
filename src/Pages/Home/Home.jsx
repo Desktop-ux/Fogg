@@ -22,8 +22,8 @@ const Home = () => {
         ease: "power3.out",
       });
 
-      gsap.from(".tilted-card", {
-        x: 60,
+      gsap.from(".right", {
+        x: 100,
         opacity: 0,
         duration: 1,
         ease: "power3.out",

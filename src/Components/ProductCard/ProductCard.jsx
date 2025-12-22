@@ -102,6 +102,7 @@ const ProductCard = () => {
     const [activeId, setActiveId] = useState("red")
     const cardref = useRef(null)
     const detailsref = useRef(null)
+ 
 
     const currentVarient = variants[activeId];
 
@@ -156,7 +157,7 @@ const ProductCard = () => {
     };
 
     return (
-        <div className='card' style={{ "--accent": currentVarient.accent, "--badge-bg": currentVarient.badgeColor, }} >
+        <div className='card'  style={{ "--accent": currentVarient.accent, "--badge-bg": currentVarient.badgeColor, }} >
             <div className="product" ref={cardref}>
                 <img src={currentVarient.cardimg} alt={currentVarient.name} />
             </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useLayoutEffect, useRef, useState } from 'react'
 import './faqs.css'
 import gsap from 'gsap'
 
@@ -68,40 +68,102 @@ const faqs = [
   }
 ];
 
-
 const Faqs = () => {
+  const faqsref = useRef(null)
+  const faqHeadref = useRef(null)
+  const enqref = useRef(null)
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(faqsref.current, {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: faqsref.current,
+          start: "top 100%",
+          end: "bottom 60%",
+          markers: false,
+          scrub: 1,
+        },
+      });
+    })
+    return () => ctx.revert();
+  }, [])
+
+    useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(faqHeadref.current, {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: faqHeadref.current,
+          start: "top 100%",
+          end: "bottom 60%",
+          markers: false,
+          scrub: 1,
+        },
+      });
+    })
+    return () => ctx.revert();
+  }, [])
+
+    useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(enqref.current, {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: enqref.current,
+          start: "top 100%",
+          end: "bottom 60%",
+          markers: false,
+          scrub: 1,
+        },
+      });
+    })
+    return () => ctx.revert();
+  }, [])
 
   const [activeId, setActiveId] = useState()
 
   return (
     <div className='faq'>
-      <div className="logo_faq">
-        <img src={logo_white} alt="" />
+      <div className="faq_head_container" ref={faqHeadref}>
+        <div className="logo_faq">
+          <img src={logo_white} alt="" />
 
+        </div>
+        <div class="lux-line"></div>
+
+        <p className='faq_head'>Frequently Asked Questions</p>
+        <h2 className='faq_main' >Everything you need to know about <br />
+          <span>Elite collection</span></h2>
+        <p className='faq_text'>Find answers to common questions about our Elite fragnancies, shipping, returns, and more.</p>
       </div>
-      <div class="lux-line"></div>
+    
 
-      <p className='faq_head'>Frequently Asked Questions</p>
-      <h2 className='faq_main' >Everything you need to know about <br />
-        <span>Elite collection</span></h2>
-      <p className='faq_text'>Find answers to common questions about our Elite fragnancies, shipping, returns, and more.</p>
+      <div className="questions" ref={faqsref} >
+        {
+          faqs.map(faq => (
+            <FaqItem key={faq.id} isOpen={activeId === faq.id} onToggle={() =>
+              setActiveId(activeId === faq.id ? null : faq.id)
+            } question={faq.question} answer={faq.answer} />
+          ))
+        }
+      </div>
 
-    <div className="questions">
-       {
-        faqs.map(faq=>(
-          <FaqItem key={faq.id} isOpen={activeId === faq.id} onToggle={() =>
-            setActiveId(activeId === faq.id ? null : faq.id)
-          } question={faq.question} answer={faq.answer} />
-        ))
-       }
-    </div>
-     
-     <div className="enquiry">
-       <h2 className="more_ques">Still Have Questions?</h2>
-       <p>Our ELite Fragnance experts are here to help you find the perfect <br />
-       scent or answer any questions about your collections.</p>
-       <button className="contact_support">Contact Support</button>
-     </div>
+      <div className="enquiry" ref={enqref}>
+        <h2 className="more_ques">Still Have Questions?</h2>
+        <p>Our ELite Fragnance experts are here to help you find the perfect <br />
+          scent or answer any questions about your collections.</p>
+        <button className="contact_support">Contact Support</button>
+      </div>
     </div>
   )
 }
