@@ -13,10 +13,16 @@ const WishlistProvider = ({ children }) => {
     } else {
       setWishlist([...wishlist, product]);
     }
+
+
   };
+  const clearWishlist = ()=>{
+    setWishlist([])
+  }
+
 
   return (
-    <WishlistContext.Provider value={{ wishlist, toggleWishlist }}>
+    <WishlistContext.Provider value={{ wishlist, toggleWishlist , clearWishlist}}>
       {children}
     </WishlistContext.Provider>
   );

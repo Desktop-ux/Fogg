@@ -91,10 +91,49 @@ button.to_cart{
 
 .your_wishlist_container{
     width: 100%;
-    height: 50vb;
-    background-color: #02348b;
+    gap: 1rem
+    ;
+    background-color: #010a1a;
     margin: 2rem 0;
-    overflow-x: scroll;
+    overflow-x: auto;
+    padding: 1rem 2rem;
     display: flex ;
     flex-direction: row;
+    scroll-behavior: smooth;
+    align-items: center;
+}
+
+
+
+.your_wishlist_container::-webkit-scrollbar{
+    height: 1rem;
+}
+
+.your_wishlist_container::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+
+.fragnanceCard {
+  min-width: 300px; /* VERY IMPORTANT */
+  flex-shrink: 0;
+}
+
+.scroll-controls {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.scroll-controls button {
+  padding: 8px 14px;
+  border-radius: 50%;
+  background: #111;
+  color: white;
+  cursor: pointer;
+}
+
+
+.wish_foot{
+    width: 100%;
 }
