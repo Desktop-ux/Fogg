@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useLayoutEffect, useRef, useState } from 'react'
 import './Products.css'
 import FragnanceCard from '@/Components/FragnanceCard/FragnanceCard';
 import Footer from '@/Components/Footer/Footer';
@@ -36,6 +36,8 @@ import L_Or_Élégant from "/src/assets/French/L’Or Élégant.png"
 import Noir_Absolu from "/src/assets/French/Noir Absolu.png"
 import Ver_Noble from "/src/assets/French/Vert Noble.png"
 
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
 
 const categories = ["All", "Attar", "Perfumes", "RollOns", "French", "Arabia"];
 
@@ -376,12 +378,99 @@ const AllFrags = [
 const Products = () => {
   const [ActiveCat, setActiveCat] = useState("All")
 
+  const footerRef = useRef(null);
+
+
   const visibleFragnances = ActiveCat === "All" ? AllFrags : AllFrags.filter(
     item => item.category === ActiveCat
   )
 
+  const pageRef = useRef(null)
+  const cardsRef = useRef([])
+  cardsRef.current = []
+
+  const addToCardsRef = (el) => {
+    if (el && !cardsRef.current.includes(el)) {
+      cardsRef.current.push(el)
+    }
+  }
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+
+      gsap.from(".product_page_head > *", {
+        y: 60,
+        opacity: 0,
+        stagger: 0.15,
+        duration: 1,
+        ease: "power3.out",
+      })
+
+      gsap.from(".product_categories ", {
+        y: 30,
+        opacity: 0,
+        stagger: 0.08,
+        duration: 0.6,
+        ease: "power2.out",
+        delay: 0.4,
+      })
+
+    }, pageRef)
+
+    return () => ctx.revert()
+  }, [])
+
+  useLayoutEffect(() => {
+    gsap.fromTo(
+      cardsRef.current,
+      {
+        y: 40,
+        opacity: 0,
+        scale: 0.95,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        stagger: 0.08,
+        duration: 0.6,
+        ease: "power3.out",
+
+      }
+    )
+  }, [ActiveCat])
+
+
+  useLayoutEffect(() => {
+    if (!footerRef.current) return;
+
+    gsap.fromTo(
+      footerRef.current,
+      {
+        y: 60,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: footerRef.current,
+          start: "top 85%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }, []);
+
+  useLayoutEffect(() => {
+    ScrollTrigger.refresh();
+  }, [ActiveCat]);
+
+
+
   return (
-    <div className='products-page'>
+    <div className='products-page' ref={pageRef}>
       <div className="product_page_head">
         <button className="exclusive">Our Collection</button>
         <h1>Elite <br />Fragnances</h1>
@@ -397,30 +486,34 @@ const Products = () => {
       <div className="product_categories">
         {
           categories.map((category, index) => (
-            <button key={index} onClick={() => setActiveCat(category)} className={`category_button ${
-        ActiveCat === category ? "active" : ""
-      }`}>{category}</button>
+            <button key={index} onClick={() => setActiveCat(category)} className={`category_button ${ActiveCat === category ? "active" : ""
+              }`}>{category}</button>
           ))
         }
       </div>
       <div className="fragnances_card_container">
         {
           Object.values(visibleFragnances).map(item => {
-         return   <FragnanceCard
-              key={`${item.category}-${item.id}`}
-              fragImg={item.attar_img || item.roll_img}
-              category={item.category}
-              name={item.attar_name || item.roll_name}
-              descp={item.descp}
-              newPrice={item.new_price}
-              oldPrice={item.old_price}
-              dot_color ={item.dot_color}
-              car_badge = {item.car_badge}
-            />
+            return <div ref={addToCardsRef} key={`${item.category}-${item.id}`}>
+              <FragnanceCard
+                product={item}
+                fragImg={item.attar_img || item.roll_img}
+                category={item.category}
+                name={item.attar_name || item.roll_name}
+                descp={item.descp}
+                newPrice={item.new_price}
+                oldPrice={item.old_price}
+                dot_color={item.dot_color}
+                car_badge={item.car_badge}
+              />
+            </div>
           })
         }
       </div>
-      <Footer/>
+      <div className="prdouct_foot" ref={footerRef}>
+        <Footer />
+      </div>
+
     </div>
   )
 }

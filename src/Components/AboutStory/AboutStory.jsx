@@ -7,24 +7,24 @@ import gsap from 'gsap'
 const AboutStory = () => {
     const aboutStoryref = useRef(null)
 
-      useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(aboutStoryref.current, {
-        y: 100,
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: aboutStoryref.current,
-          start: "top 100%",
-          end: "bottom 60%",
-          markers: false,
-          scrub: 1,
-        },
-      });
-    })
-     return () => ctx.revert(); 
-  }, [])
+    useLayoutEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.from(aboutStoryref.current, {
+                y: 100,
+                opacity: 0,
+                duration: 1,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: aboutStoryref.current,
+                    start: "top 100%",
+                    end: "bottom 60%",
+                    markers: false,
+                    scrub: 1,
+                },
+            });
+        })
+        return () => ctx.revert();
+    }, [])
 
     return (
         <div className='about_story' ref={aboutStoryref}>

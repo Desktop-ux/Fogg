@@ -14,6 +14,8 @@ import Wishlist from './Pages/Wishlist/Wishlist';
 import ScrollToTop from "./ScrollToTop";
 
 
+
+
 const App = () => {
   useEffect(() => {
     const lenis = new Lenis({
@@ -34,7 +36,7 @@ const App = () => {
     };
   }, []);
 
-  return (
+  return ( 
 
     <div className='app'>
       <ClickSpark

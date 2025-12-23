@@ -2,13 +2,18 @@ import React, { useState } from 'react'
 import "./FragnanceCard.css"
 import { useAspect } from '@react-three/drei'
 
-const FragnanceCard = ({ name, descp, newPrice, oldPricw, category, fragImg, dot_color, car_badge }) => {
+import { useContext } from 'react'
+import { WishlistContext } from "@/Context/WishlistContext";
 
-    const [isWishlisted, setIsWishListed] = useState(false)
+const FragnanceCard = ({ name, descp, newPrice, oldPricw, category, fragImg, dot_color, car_badge, product }) => {
 
-    const toggleWishlisted = () => {
-        setIsWishListed(!isWishlisted)
-    }
+    const { wishlist, toggleWishlist } = useContext(WishlistContext);
+
+    const isWishlisted = wishlist.some(item => item.id === product.id);
+
+    // const toggleWishlisted = () => {
+    //     setIsWishListed(!isWishlisted)
+    // }
 
     return (
         <div className='fragnanceCard'>
@@ -38,7 +43,7 @@ const FragnanceCard = ({ name, descp, newPrice, oldPricw, category, fragImg, dot
                 {/* <i class="fa-regular fa-heart"></i> */}
                 <div className="frag_actions">
                     <button className="addToCart">Add to Cart</button>
-                    <div className="wishlist_btn" onClick={toggleWishlisted}>
+                    <div className="wishlist_btn" onClick={() => toggleWishlist(product)}>
                         <i
                             className={isWishlisted ? "fa-solid fa-heart" : "fa-regular fa-heart"}
                             style={{ color: isWishlisted ? "red" : "#aaa" }}

@@ -4,12 +4,15 @@ import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 
+import WishlistProvider from './Context/WishlistContext'
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-    <App />
+      <WishlistProvider>
+        <App />
+      </WishlistProvider>
     </BrowserRouter>
   </StrictMode>,
 )
-  
