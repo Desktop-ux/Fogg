@@ -94,4 +94,7 @@ button.to_cart{
     height: 50vb;
     background-color: #02348b;
     margin: 2rem 0;
+    overflow-x: scroll;
+    display: flex ;
+    flex-direction: row;
 }

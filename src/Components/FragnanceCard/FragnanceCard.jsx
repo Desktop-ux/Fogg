@@ -9,7 +9,7 @@ const FragnanceCard = ({ name, descp, newPrice, oldPricw, category, fragImg, dot
 
     const { wishlist, toggleWishlist } = useContext(WishlistContext);
 
-    const isWishlisted = wishlist.some(item => item.id === product.id);
+    const isWishlisted = wishlist.some(item => item.uid === product.uid);
 
     // const toggleWishlisted = () => {
     //     setIsWishListed(!isWishlisted)

@@ -43,6 +43,7 @@ const categories = ["All", "Attar", "Perfumes", "RollOns", "French", "Arabia"];
 
 const Attar = {
   attar1: {
+    uid: "attar-1",
     id: 1,
     attar_img: BlueWave,
     new_price: "$109",
@@ -54,6 +55,7 @@ const Attar = {
     descp: "A fresh and cool attar inspired by oceanic notes for modern everyday wear."
   },
   attar2: {
+    uid: "attar-2",
     id: 2,
     attar_img: CrimsonSpice,
     new_price: "$119",
@@ -65,6 +67,7 @@ const Attar = {
     descp: "Warm spicy notes blended to create a sensual and captivating aroma."
   },
   attar3: {
+    uid: "attar-3",
     id: 3,
     attar_img: EmeraldMush,
     new_price: "$109",
@@ -76,6 +79,7 @@ const Attar = {
     descp: "Fresh green accords balanced with smooth musk for a naturally elegant scent."
   },
   attar4: {
+    uid: "attar-4",
     id: 4,
     attar_img: NoirIntense,
     new_price: "$125",
@@ -87,6 +91,7 @@ const Attar = {
     descp: "A dark, powerful attar with intense notes that leave a bold, lasting impression."
   },
   attar5: {
+    uid: "attar-5",
     id: 5,
     attar_img: PurpleAmber,
     new_price: "$199",
@@ -98,6 +103,7 @@ const Attar = {
     descp: "A smooth amber-rich fragrance with sweet undertones for a luxurious feel."
   },
   attar6: {
+    uid: "attar-6",
     id: 6,
     attar_img: RoyalOud,
     new_price: "$149",
@@ -109,6 +115,7 @@ const Attar = {
     descp: "A rich blend of deep oud notes crafted for a truly royal and timeless fragrance."
   },
   attar7: {
+    uid: "attar-7",
     id: 7,
     attar_img: WhiteOud,
     new_price: "$149",
@@ -124,6 +131,7 @@ const Attar = {
 
 const RollOns = {
   r1: {
+    uid: "rollon-1",
     id: 1,
     roll_img: blue_rollOn,
     roll_name: "Fresh Roll-On",
@@ -135,6 +143,7 @@ const RollOns = {
     category: "RollOns",
   },
   r2: {
+    uid: "rollon-2",
     id: 2,
     roll_img: green_rollOn,
     roll_name: "Extreme Roll-On",
@@ -146,6 +155,7 @@ const RollOns = {
     category: "RollOns",
   },
   r3: {
+    uid: "rollon-3",
     id: 3,
     roll_img: orange_rollOn,
     roll_name: "Intense Roll-On",
@@ -157,6 +167,7 @@ const RollOns = {
     category: "RollOns",
   },
   r4: {
+    uid: "rollon-4",
     id: 4,
     roll_img: cyan_rollOn,
     roll_name: "Energy Roll-On",
@@ -168,6 +179,7 @@ const RollOns = {
     category: "RollOns",
   },
   r5: {
+    uid: "rollon-5",
     id: 5,
     roll_img: red_rollOn,
     roll_name: "Spiced Roll-On",
@@ -179,6 +191,7 @@ const RollOns = {
     category: "RollOns",
   },
   r6: {
+    uid: "rollon-6",
     id: 6,
     roll_img: purple_rollOn,
     roll_name: "Orea Roll-On",
@@ -193,6 +206,7 @@ const RollOns = {
 
 const Perfumes = {
   p1: {
+    uid: "perfume-1",
     id: 1,
     roll_img: var_green,
     roll_name: "Emerald Rush",
@@ -204,6 +218,7 @@ const Perfumes = {
     category: "Perfumes",
   },
   p2: {
+    uid: "perfume-2",
     id: 2,
     roll_img: var_blue,
     roll_name: "Aqua Storm",
@@ -215,6 +230,7 @@ const Perfumes = {
     category: "Perfumes",
   },
   p3: {
+    uid: "perfume-3",
     id: 3,
     roll_img: var_violet,
     roll_name: "Voilet Noir",
@@ -226,6 +242,7 @@ const Perfumes = {
     category: "Perfumes",
   },
   p4: {
+    uid: "perfume-4",
     id: 4,
     roll_img: var_red,
     roll_name: "Crimson Royale",
@@ -237,6 +254,7 @@ const Perfumes = {
     category: "Perfumes",
   },
   p5: {
+    uid: "perfume-5",
     id: 5,
     roll_img: var_yellow,
     roll_name: "Golden Spark",
@@ -248,6 +266,7 @@ const Perfumes = {
     category: "Perfumes",
   },
   p6: {
+    uid: "perfume-6",
     id: 6,
     roll_img: var_orange,
     roll_name: "Amber Blaze",
@@ -262,6 +281,7 @@ const Perfumes = {
 
 const Arabia = {
   a1: {
+    uid: "arabia-1",
     id: 1,
     roll_img: Ambre_Royale,
     roll_name: "Ambre Royale",
@@ -273,6 +293,7 @@ const Arabia = {
     category: "Arabia",
   },
   a2: {
+    uid: "arabia-2",
     id: 2,
     roll_img: Nature_Supreme,
     roll_name: "Nature Supreme",
@@ -284,6 +305,7 @@ const Arabia = {
     category: "Arabia",
   },
   a3: {
+    uid: "arabia-3",
     id: 3,
     roll_img: Aqua_Crystal,
     roll_name: "Aqua Crystal",
@@ -295,6 +317,7 @@ const Arabia = {
     category: "Arabia",
   },
   a4: {
+    uid: "arabia-4",
     id: 4,
     roll_img: Noir_instense,
     roll_name: "Noir instense",
@@ -309,6 +332,7 @@ const Arabia = {
 
 const French = {
   f1: {
+    uid: "french-1",
     id: 1,
     roll_img: L_Or_Élégant,
     roll_name: "FOGG L’Or Élégant",
@@ -320,6 +344,7 @@ const French = {
     category: "French",
   },
   f2: {
+    uid: "french-2",
     id: 2,
     roll_img: Ver_Noble,
     roll_name: "FOGG Vert Noble",
@@ -331,6 +356,7 @@ const French = {
     category: "French",
   },
   f3: {
+    uid: "french-3",
     id: 3,
     roll_img: Bleu_Azur,
     roll_name: "FOGG Bleu Azur",
@@ -342,6 +368,7 @@ const French = {
     category: "French",
   },
   f4: {
+    uid: "french-4",
     id: 4,
     roll_img: Ambre_Précieux,
     roll_name: "FOGG Ambre Précieux",
@@ -353,6 +380,7 @@ const French = {
     category: "French",
   },
   f5: {
+    uid: "french-5",
     id: 5,
     roll_img: Noir_Absolu,
     roll_name: "FOGG Noir Absolu",
@@ -496,6 +524,7 @@ const Products = () => {
           Object.values(visibleFragnances).map(item => {
             return <div ref={addToCardsRef} key={`${item.category}-${item.id}`}>
               <FragnanceCard
+                uid={item.uid}
                 product={item}
                 fragImg={item.attar_img || item.roll_img}
                 category={item.category}

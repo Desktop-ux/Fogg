@@ -6,10 +6,10 @@ const WishlistProvider = ({ children }) => {
   const [wishlist, setWishlist] = useState([]);
 
   const toggleWishlist = (product) => {
-    const exists = wishlist.find(item => item.id === product.id);
+    const exists = wishlist.find(item => item.uid === product.uid);
 
     if (exists) {
-      setWishlist(wishlist.filter(item => item.id !== product.id));
+      setWishlist(wishlist.filter(item => item.uid !== product.uid));
     } else {
       setWishlist([...wishlist, product]);
     }
