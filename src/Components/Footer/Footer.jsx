@@ -9,7 +9,7 @@ import gsap from 'gsap'
 import { Link } from 'react-router-dom'
 
 
-
+ 
 const Footer = () => {
   const footerref = useRef(null)
 

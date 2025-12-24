@@ -47,7 +47,7 @@ const Navbar = () => {
       <div className="logo">
         <img src={logo} alt="FOGG Logo" />
       </div>
-
+ 
       {/* Links */}
       <div className="links" onMouseLeave={handleMouseLeave}>
         <div className="underline" style={hoverStyle}></div>
