@@ -129,7 +129,7 @@ const Experience = () => {
     { image: mockup2, video: fogg1 },
     { image: mockup3, video: fogg2 },
   ];
-
+ 
   return (
     <div className="exp">
       <div className="exp-heading" ref={exphead}>

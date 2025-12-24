@@ -26,11 +26,6 @@ nav {
   image-rendering: auto;
 }
 
-
-
-
-
-
 /* Navigation Links */
 .links {
   position: relative;
@@ -92,4 +87,48 @@ nav {
 
 .cart p {
   color: black;
+}
+
+.resp_navLinks{
+  display: none;
+}
+
+
+/* Small devices */
+@media (max-width: 480px) {
+  .navbar{
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .logo{
+    width: 5vw;
+  }
+
+  .links{
+    width: 70%;
+    padding: 0.5rem;
+  }
+
+  .cart{
+    display: none;
+  }
+
+  .resp_navLinks{
+    display: flex;
+  }
+
+  .links{
+    display: none;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+
+}
+
+/* Small laptops */
+@media (max-width: 1024px) {
+
 }

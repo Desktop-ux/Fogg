@@ -58,8 +58,6 @@ const Home = () => {
       {/* Right Section */}
       <div className="right">
         <div className="card-wrapper">
-          
-
           <TiltedCard
             className="tilted-card"
             imageSrc={mockup}
@@ -74,7 +72,7 @@ const Home = () => {
         </div>
       </div>
     </div>
-    <Experience />
+    <Experience /> 
     <Collection /> 
     <Faqs />
     <Footer/>

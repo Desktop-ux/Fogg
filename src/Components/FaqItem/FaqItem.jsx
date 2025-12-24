@@ -22,7 +22,7 @@ const FaqItem = ({question , answer , isOpen , onToggle}) => {
         <div className='ques-container'>
             <div className="question" onClick={onToggle}>
                 <h3 className='ques'>{question}</h3>
-                <i ref={iconref} class="fa-solid fa-plus"></i>
+                <i ref={iconref} className="fa-solid fa-plus"></i>
             </div>
 
             <div className="answer" ref={answreref}>

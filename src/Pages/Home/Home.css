@@ -1,84 +1,88 @@
 .hero {
-    width: 100%;
-    padding: 2rem 6rem;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
+  width: 100%;
+  padding: 2rem 6rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow-x:hidden;
 }
 
 .left {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 2rem;
-    padding: 5rem 0;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  padding: 5rem 0;
 }
 
 .exclusive {
-    border: none;
-    outline: none;
-    box-shadow: 0 0 1px white;
-    padding: 0.5rem 1rem;
-    background-color: rgb(40, 36, 36);
-    color: white;
-    border-radius: 5rem;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 1px white;
+  padding: 0.5rem 1rem;
+  background-color: rgb(40, 36, 36);
+  color: white;
+  border-radius: 5rem;
 }
 
 h1 {
-   font-weight: 500;
-
-    font-size: 5rem;
-    line-height: 1;
+  font-weight: 500;
+  font-size: 5rem;
+  line-height: 1;
 }
 
 h1 span {
-    text-transform: uppercase;
-    font-weight: 200;
-}
-p{
-    color: rgb(219, 219, 219);
-    font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 200;
 }
 
-.buttons{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 2rem;
-
-}
-.collection{
-    background: white;
-    color: black;
-    padding: 1rem 2rem;
-    border: none;
-    outline: none;
-    font-weight: 600;
-     transition: all 0.5s ease-in-out;
-}
-.story{
-    padding: 1rem 2rem;
-    font-weight: 500;
-    color: rgba(255, 255, 0, 0.441);
-    border: 1px solid rgba(255, 217, 0, 0.408);
-    background-color: transparent;
-    border-radius: 5rem;
-    transition: all 0.5s ease-in-out;
+p {
+  color: rgb(219, 219, 219);
+  font-size: 1rem;
 }
 
-.story:hover{
-    background: white;
-    color: black;
-    border: none;
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
 }
-.collection:hover{
-        color: rgba(255, 255, 0, 0.441);
-    border: 1px solid rgba(255, 217, 0, 0.408);
-    background-color: transparent;
+
+.collection {
+  background: white;
+  color: black;
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  transition: all 0.5s ease-in-out;
 }
+
+.story {
+  padding: 1rem 2rem;
+  font-weight: 500;
+  color: rgba(255, 255, 0, 0.441);
+  border: 1px solid rgba(255, 217, 0, 0.408);
+  background-color: transparent;
+  border-radius: 5rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.story:hover {
+  background: white;
+  color: black;
+  border: none;
+}
+
+.collection:hover {
+  color: rgba(255, 255, 0, 0.441);
+  border: 1px solid rgba(255, 217, 0, 0.408);
+  background-color: transparent;
+}
+
 /* Right Section Setup */
 .right {
   position: relative;
@@ -92,8 +96,10 @@ p{
 /* Wrapper to hold Orb + Card */
 .card-wrapper {
   position: relative;
-  display: grid;          /* centers and stacks both elements */
-  place-items: center;    /* perfectly center both horizontally + vertically */
+  display: grid;
+  /* centers and stacks both elements */
+  place-items: center;
+  /* perfectly center both horizontally + vertically */
   box-shadow: 0 0 80px rgba(255, 255, 255, 0.138);
 }
 
@@ -123,17 +129,98 @@ p{
 .tilted-card {
   position: absolute;
   z-index: 2;
- 
 }
 
 /* Optional: subtle glow pulse animation */
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
     opacity: 0.7;
   }
+
   50% {
     transform: scale(1.1);
     opacity: 1;
   }
 }
+
+
+
+
+
+
+/* Small devices */
+@media (max-width: 480px) {
+  
+
+  .hero {
+    padding: 1rem 1rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .left {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+  }
+
+  .left h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .left p {
+    text-align: center;
+    font-size: 0.75rem;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .collection {
+    background: white;
+    color: black;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .story {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 0, 0.441);
+    border: 1px solid rgba(255, 217, 0, 0.408);
+    background-color: transparent;
+    border-radius: 5rem;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .right{
+    width: 80%;
+    padding: 0;
+
+  }
+  .card-wrapper{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+}
+
+/* Tablets */
+@media (max-width: 768px) {}
+
+/* Small laptops */
+@media (max-width: 1024px) {}

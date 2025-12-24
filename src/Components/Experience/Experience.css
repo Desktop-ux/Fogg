@@ -125,3 +125,27 @@
     font-size: 2rem;
   }
 }
+
+/* Mobile */
+@media (max-width: 480px) {
+  .exp{
+    padding: 3rem 1rem;
+  }
+
+  .exp-heading h1{ 
+    font-size:3rem;
+  }
+  .exp-heading h2{
+    font-size: 2rem;
+  }
+  .exp-heading p {
+    font-size: 0.85rem;
+  }
+
+}
+
+/* Tablets */
+@media (max-width: 768px) {}
+
+/* Small laptops */
+@media (max-width: 1024px) {}

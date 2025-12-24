@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/images/logo.png";
+import StaggeredMenu from "../StaggeredMenu/StaggeredMenu";
 
 const Navbar = () => {
   const location = useLocation();
@@ -69,6 +70,10 @@ const Navbar = () => {
             {item.label}
           </Link>
         ))}
+      </div>
+
+      <div className="resp_navLinks">
+        <StaggeredMenu/>
       </div>
 
       {/* Cart */}

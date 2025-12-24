@@ -139,7 +139,7 @@ const Faqs = () => {
           <img src={logo_white} alt="" />
 
         </div>
-        <div class="lux-line"></div>
+        <div className="lux-line"></div>
 
         <p className='faq_head'>Frequently Asked Questions</p>
         <h2 className='faq_main' >Everything you need to know about <br />
