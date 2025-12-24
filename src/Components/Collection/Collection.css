@@ -20,9 +20,38 @@
     text-align: center;
     max-width: 600px;
 }
-.card_container{
+
+.card_container {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+
+/* Small devices */
+@media (max-width: 480px) {
+    .collection-section {
+        padding: 1rem 1rem;
+    }
+
+    .collection-section h1 {
+        font-size: 2rem;
+        font-weight: 300;
+        color: white;
+    }
+
+    .collection-section p {
+        font-size: 0.75rem;
+        color: #ccc;
+        margin-top: 1rem;
+        text-align: center;
+        max-width: 600px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {}
+
+/* Small laptops */
+@media (max-width: 1024px) {}

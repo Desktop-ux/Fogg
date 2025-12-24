@@ -1,4 +1,4 @@
-.faq{
+.faq {
     width: 100%;
     padding: 1rem 6rem;
     display: flex;
@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-.faq_head_container{
+.faq_head_container {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -15,48 +15,47 @@
 
 
 .lux-line {
-  width: 220px;
-  height: 3px;
-  margin: 5px auto;
-  background: linear-gradient(
-    to right,
-    transparent,
-    #d5d5d5,
-    transparent
-  );
-  /* box-shadow: 0 0 6px rgba(255,255,255,0.4); */
+    width: 220px;
+    height: 3px;
+    margin: 5px auto;
+    background: linear-gradient(to right,
+            transparent,
+            #d5d5d5,
+            transparent);
+    /* box-shadow: 0 0 6px rgba(255,255,255,0.4); */
 }
 
- 
-.logo_faq img{
+
+.logo_faq img {
     width: 12vw;
 }
 
-.faq_head{
+.faq_head {
     font-size: 1rem;
     color: rgb(164, 162, 162);
     margin-top: 1rem;
 }
 
-.faq_main{
+.faq_main {
     font-size: 2.5rem;
     font-weight: 400;
     text-align: center;
     margin-top: 0.5rem;
 }
 
-.faq_main span{
+.faq_main span {
     font-weight: 300;
     font-style: italic;
 }
-.faq_text{
+
+.faq_text {
     font-size: 1rem;
     color: rgb(164, 162, 162);
     text-align: center;
     margin-top: 0.5rem;
 }
 
-.questions{
+.questions {
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
@@ -65,7 +64,7 @@
     gap: 1rem;
 }
 
-.enquiry{
+.enquiry {
     margin-top: 2rem;
     width: 70%;
     display: flex;
@@ -76,20 +75,21 @@
     border-radius: 1rem;
 }
 
-.more_ques{
+.more_ques {
     font-size: 2rem;
     font-weight: 400;
     margin-top: 1.5rem;
     color: white;
 }
-.enquiry p{
+
+.enquiry p {
     font-size: 1rem;
     color: rgb(215, 214, 214);
     text-align: center;
     margin: 0.5rem 0 2rem 0;
 }
 
-button.contact_support{
+button.contact_support {
     padding: 0.7rem 2rem;
     font-size: 1rem;
     color: rgb(5, 7, 4);
@@ -100,3 +100,90 @@ button.contact_support{
     cursor: pointer;
     text-transform: uppercase;
 }
+
+
+/* Small devices */
+@media (max-width: 480px) {
+    .faq {
+        padding: 1rem 0.5rem;
+    }
+
+    .lux-line {
+        width: 500px;
+    }
+
+    .logo_faq img {
+        width: 25vw;
+    }
+
+    .faq_head {
+        font-size: 0.85rem;
+        color: rgb(164, 162, 162);
+        margin-top: 1rem;
+    }
+
+    .faq_main {
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+
+    .faq_main span {
+        font-weight: 300;
+        font-style: italic;
+    }
+
+    .faq_text {
+        font-size: 0.85rem;
+        color: rgb(164, 162, 162);
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+
+
+    .enquiry {
+        margin-top: 2rem;
+        width: 95%;
+
+        align-items: center;
+    }
+
+    .more_ques {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-top: 1.5rem;
+        color: white;
+        text-align: center;
+    }
+
+    .enquiry p {
+        font-size: 0.75rem;
+        color: rgb(215, 214, 214);
+        text-align: center;
+        margin: 0.5rem 0 2rem 0;
+    }
+
+    button.contact_support {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        color: rgb(5, 7, 4);
+        background: white;
+        border: none;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
+    .questions {
+        width: 100%;
+    }
+
+}
+
+/* Tablets */
+@media (max-width: 768px) {}
+
+/* Small laptops */
+@media (max-width: 1024px) {}

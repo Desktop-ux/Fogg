@@ -28,8 +28,8 @@ const FaqItem = ({question , answer , isOpen , onToggle}) => {
             <div className="answer" ref={answreref}>
                 <p className='ans'>{answer}</p>
             </div>
-        </div>
-
+        </div> 
+ 
     )
 }
 

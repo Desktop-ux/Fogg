@@ -139,7 +139,7 @@ const ProductCard = () => {
         }, cardref)
         return () => ctx.revert();
     }, [activeId]);
-
+ 
 
     const handleSelect = (id, e) => {
         if (id === activeId) return;

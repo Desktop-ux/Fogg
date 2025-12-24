@@ -23,7 +23,7 @@ const Collection = () => {
       });
     })
      return () => ctx.revert(); 
-  }, [])
+  }, []) 
 
 
   return (

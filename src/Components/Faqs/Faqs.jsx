@@ -131,7 +131,7 @@ const Faqs = () => {
   }, [])
 
   const [activeId, setActiveId] = useState()
-
+ 
   return (
     <div className='faq'>
       <div className="faq_head_container" ref={faqHeadref}>
