@@ -47,7 +47,7 @@ const About = () => {
       <Visionary />
       <Reviews />
       <Footer />
-    </div>
+    </div> 
   )
 }
 

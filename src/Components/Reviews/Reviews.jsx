@@ -39,7 +39,7 @@ const Reviews = () => {
         duration: 0.8,
         ease: "power3.out",
         scrollTrigger: {
-          trigger: ".about_review",
+          trigger: "about_review",
           start: "top 75%",
           end: "top 40%",
         }
@@ -52,7 +52,7 @@ const Reviews = () => {
         duration: 0.6,
         ease: "power2.out",
         scrollTrigger: {
-          trigger: ".about_review",
+          trigger: "about_review",
           start: "top 75%",
         }
       })
@@ -92,14 +92,10 @@ const Reviews = () => {
     <div className='about_review' ref={sectionRef}>
         <h1>What Our <span>Clients Say</span></h1>
         <div className="lux-line-red"></div>
-
-       
-
         <div className='review_cards'>
             {reviews_data.map((review, index)=>{
              return  ( <ReviewCard key={index} name = {review.name} profession={review.profession} reviewText={review.review}/>)
-            })}
-          
+            })} 
         </div>
 
         <div className="explore_collection">
@@ -107,7 +103,7 @@ const Reviews = () => {
             <p>Join thousands of satisfied customers who have made the <span>FOGG</span>their elite scent</p>
             <button className='explore_btn' >Explore Collection</button>
         </div>
-    </div>
+    </div> 
   )
 }
 

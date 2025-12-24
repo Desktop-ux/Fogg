@@ -19,6 +19,7 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    padding: 0 2rem;
 }
 
 .explore_collection {
@@ -30,11 +31,13 @@
     gap: 2rem;
 
 }
+
 .explore_collection h2 {
     font-size: 2rem;
     font-weight: 300;
     text-align: center;
 }
+
 .explore_collection h2 span {
     font-style: italic;
 }
@@ -44,14 +47,67 @@
     text-align: center;
     color: rgb(159, 159, 159);
 }
+
 .explore_collection p span {
     font-style: italic;
 }
 
-.explore_btn{
+.explore_btn {
     padding: 1rem 1rem;
     color: black;
     background-color: white;
     width: 100%;
     font-weight: 700;
 }
+
+
+/* Small devices */
+@media (max-width: 480px) {
+    .about_review {
+        margin: 2rem 0;
+        padding: 1rem;
+    }
+
+    .about_review h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+
+    .review_cards {
+        width: 100%;
+        margin: 2rem 0;
+        flex-direction: column;
+        align-items: center;
+        padding: 0rem;
+    }
+
+
+    .explore_collection {
+        margin-top: 2rem;
+        width: 90%;
+        gap: 1rem;
+
+    }
+
+    .explore_collection p {
+        font-size: 0.75rem;
+        text-align: center;
+        color: rgb(159, 159, 159);
+    }
+
+
+    .explore_btn {
+        padding: 0.5rem 0.5rem;
+        text-transform: uppercase;
+    }
+
+
+}
+
+/* Tablets */
+@media (max-width: 768px) {}
+
+/* Small laptops */
+@media (max-width: 1024px) {}

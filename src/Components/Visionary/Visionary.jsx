@@ -20,7 +20,7 @@ const Visionary = () => {
           markers: false,
           scrub: 1,
         },
-      });
+      }); 
     })
      return () => ctx.revert(); 
   }, [])

@@ -1,66 +1,139 @@
-.visionary{
+/* =========================
+   VISIONARY SECTION
+========================= */
+
+.visionary {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem 6rem;
+    padding: 3rem 6rem;
 }
 
-.vision_head{
+/* Heading */
+.vision_head {
     font-size: 2.5rem;
     font-weight: 500;
     margin-bottom: 1rem;
+    text-align: center;
 }
-.vision_head span{
-   font-style:italic ;
+
+.vision_head span {
+    font-style: italic;
     font-weight: 200;
 }
 
-.visionary_container{
-    width: 35vw;
-    height: 35vw;
-    background-color: #181818;  
+/* Card */
+.visionary_container {
+    width: 100%;
+    max-width: 420px;
+    background-color: #181818;
     border-radius: 1rem;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     padding: 2rem;
     margin-top: 2rem;
-    transition: 0.5s ease-in-out;
+    transition: transform 0.4s ease;
 }
 
-.visionary_container:hover{
-    transform: scale(1.1);
+/* Hover effect (desktop only) */
+.visionary_container:hover {
+    transform: scale(1.05);
 }
 
-.founder{
-   
-    width: 10vw;
-    height: 10vw;
+/* Founder Image */
+.founder {
+    width: 160px;
+    height: 160px;
+    background-color: #474747;
+    border-radius: 50%;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #474747;
-    border-radius: 50%;
-    border: none;
-
 }
-.founder img{
+
+.founder img {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
     object-fit: cover;
 }
-.visionary_container h3{
+
+/* Name */
+.visionary_container h3 {
     margin-top: 1rem;
-    font-size: 1rem;
-    font-weight: 300;
+    font-size: 1.1rem;
+    font-weight: 400;
 }
 
-.visionary_container p{
-    margin-top: 1rem;
-    font-size: 0.75rem;
-    font-weight: 200;
+/* Description */
+.visionary_container p {
+    margin-top: 0.8rem;
+    font-size: 0.85rem;
+    font-weight: 300;
     text-align: center;
-    line-height: 1.2rem;
+    line-height: 1.4rem;
+}
+
+
+
+/* =========================
+   MOBILE DEVICES
+========================= */
+@media (max-width: 480px) {
+    .visionary {
+        padding: 1.5rem 1rem;
+    }
+
+    .vision_head {
+        font-size: 1.9rem;
+    }
+
+    .visionary_container {
+        max-width: 100%;
+        padding: 1.5rem 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .founder {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Disable hover zoom on mobile */
+    .visionary_container:hover {
+        transform: none;
+    }
+}
+
+
+
+/* =========================
+   TABLETS
+========================= */
+@media (max-width: 768px) {
+    .visionary {
+        padding: 2rem 2rem;
+    }
+
+    .visionary_container {
+        max-width: 380px;
+    }
+
+    .founder {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+
+
+/* =========================
+   SMALL LAPTOPS
+========================= */
+@media (max-width: 1024px) {
+    .visionary {
+        padding: 3rem 3rem;
+    }
 }

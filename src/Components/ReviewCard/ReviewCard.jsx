@@ -12,7 +12,7 @@ const ReviewCard = ({ name, profession, reviewText }) => {
                     <h2>{name}</h2>
                     <p>{profession}</p>
                 </div>
-            </div>
+            </div> 
 
             <p className='review_text'>"{reviewText}"</p>
         </div>

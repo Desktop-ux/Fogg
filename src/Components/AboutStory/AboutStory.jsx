@@ -24,7 +24,7 @@ const AboutStory = () => {
             });
         })
         return () => ctx.revert();
-    }, [])
+    }, []) 
 
     return (
         <div className='about_story' ref={aboutStoryref}>
