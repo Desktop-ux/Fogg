@@ -5,7 +5,7 @@
 
 /* ================= CARD ================= */
 .fragnanceCard {
-    width: 280px;
+    width: 280px; 
     min-height: 420px;
     background: linear-gradient(
         90deg,

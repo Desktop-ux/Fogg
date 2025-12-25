@@ -34,7 +34,7 @@ const Wishlist = () => {
 
   const { wishlist, clearWishlist } = useContext(WishlistContext)
 
-  /* ---------------- PAGE LOAD ANIMATION ---------------- */
+  /*  PAGE LOAD ANIMATION  */
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -61,7 +61,7 @@ const Wishlist = () => {
     return () => ctx.revert()
   }, [])
 
-  /* ---------------- CARDS ANIMATION ---------------- */
+  /*  CARDS ANIMATION  */
 
   useLayoutEffect(() => {
     gsap.fromTo(
@@ -84,7 +84,7 @@ const Wishlist = () => {
     )
   }, [wishlist])
 
-  /* ---------------- FOOTER FADE ON SCROLL ---------------- */
+  /* FOOTER FADE ON SCROLL*/
 
   useLayoutEffect(() => {
     if (!footerRef.current) return
@@ -135,7 +135,7 @@ const Wishlist = () => {
       <div className="your_wishlist">
         <div className="your_wishlist_head">
           <h2>Your Wishlist 💙</h2>
-          <div className="lux-line-blue"></div>
+          <div className="lux-line-blue"></div> 
         </div>
 
         <div className="your_wishlist_container" ref={scrollref}>

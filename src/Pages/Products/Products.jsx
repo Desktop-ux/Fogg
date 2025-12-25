@@ -522,10 +522,10 @@ const Products = () => {
       <div className="fragnances_card_container">
         {
           Object.values(visibleFragnances).map(item => {
-            return <div className='fragnanceCard' ref={addToCardsRef} key={`${item.category}-${item.id}`}>
+            return <div className='fragnanceCard_container' ref={addToCardsRef} key={`${item.category}-${item.id}`}>
               <FragnanceCard
                 uid={item.uid}
-                product={item}
+                product={item} 
                 fragImg={item.attar_img || item.roll_img}
                 category={item.category}
                 name={item.attar_name || item.roll_name}
