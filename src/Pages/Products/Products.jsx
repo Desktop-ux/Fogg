@@ -495,7 +495,7 @@ const Products = () => {
     ScrollTrigger.refresh();
   }, [ActiveCat]);
 
-
+ 
 
   return (
     <div className='products-page' ref={pageRef}>
@@ -522,7 +522,7 @@ const Products = () => {
       <div className="fragnances_card_container">
         {
           Object.values(visibleFragnances).map(item => {
-            return <div ref={addToCardsRef} key={`${item.category}-${item.id}`}>
+            return <div className='fragnanceCard' ref={addToCardsRef} key={`${item.category}-${item.id}`}>
               <FragnanceCard
                 uid={item.uid}
                 product={item}
