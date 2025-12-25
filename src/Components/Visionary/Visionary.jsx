@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useRef } from 'react'
 import './Visionary.css'
-import founder_image from '../../Assets/images/fog_founder.png'
+import founder_image from '../../assets/images/fog_founder.png'
 import gsap from 'gsap'
 
 const Visionary = () => {
