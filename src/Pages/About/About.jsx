@@ -1,7 +1,7 @@
 import React, { useEffect, useLayoutEffect, useRef } from 'react'
 import './About.css'
 import Footer from '@/Components/Footer/Footer'
-import logo_white from '../../Assets/images/logo_white.png'
+import logo_white from '../../assets/images/logo_white.png'
 import AboutStory from '@/Components/AboutStory/AboutStory'
 import Reviews from '@/Components/Reviews/Reviews'
 import Visionary from '@/Components/Visionary/Visionary'
