@@ -1,4 +1,5 @@
-.loginCard{
+/* ================= LOGIN CARD ================= */
+.loginCard {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -6,65 +7,74 @@
     justify-content: center;
 }
 
-.login_head{
+/* ================= HEADER ================= */
+.login_head {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.login_head img{
-    width: 15vw;
+.login_head img {
+    width: 140px;
+    max-width: 60%;
 }
 
 .login_head p {
     margin-top: 0.5rem;
     font-size: 1rem;
     font-style: italic;
+    text-align: center;
 }
 
-.login_inputs{
+/* ================= INPUTS ================= */
+.login_inputs {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     padding: 0.5rem 0;
     margin: 1rem 0;
 }
 
-.input_field{
-    padding: 1rem;
-    width: 80%;
+.input_field {
+    padding: 1rem 1.2rem;
+    width: 85%;
     border: 1px solid white;
     border-radius: 3rem;
     margin-top: 1rem;
+    background: transparent;
+    color: white;
 }
 
-.login_remember{
+/* ================= REMEMBER ================= */
+.login_remember {
     width: 100%;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 0.75rem;
+    padding: 0 1rem;
+    margin-top: 0.5rem;
 }
 
-.remember{
+.remember {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.remember p{
+.remember p,
+.forget p {
     font-size: 0.75rem;
-}
-.forget p{
-    font-size: 0.75rem;
-    color: aliceblue;
 }
 
-button.login_btn{
+.forget p {
+    color: aliceblue;
+    cursor: pointer;
+}
+
+/* ================= BUTTON ================= */
+button.login_btn {
     padding: 1rem;
     background: white;
     color: black;
@@ -72,4 +82,48 @@ button.login_btn{
     border-radius: 2rem;
     margin-top: 2rem;
     font-weight: 700;
+    cursor: pointer;
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 768px) {
+    .login_head img {
+        width: 120px;
+    }
+
+    .input_field {
+        width: 90%;
+    }
+
+    button.login_btn {
+        padding: 0.9rem;
+    }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 480px) {
+    .login_head img {
+        width: 100px;
+    }
+
+    .login_head p {
+        font-size: 0.9rem;
+    }
+
+    .input_field {
+        width: 100%;
+        padding: 0.85rem 1rem;
+    }
+
+    .login_remember {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+        padding: 0;
+    }
+
+    button.login_btn {
+        padding: 0.85rem;
+        margin-top: 1.5rem;
+    }
 }
