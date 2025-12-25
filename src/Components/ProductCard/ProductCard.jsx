@@ -1,19 +1,19 @@
 import React, { useLayoutEffect, useRef, useState } from 'react'
 import "./ProductCard.css"
 import gsap from 'gsap'
-import red_card from "../../Assets/Bottles/red-card.png"
-import green_card from "../../Assets/Bottles/green-card.png"
-import blue_card from "../../Assets/Bottles/blue-card.png"
-import orange_card from "../../Assets/Bottles/orange-card.png"
-import violet_card from "../../Assets/Bottles/voilet-card.png"
-import yellow_card from "../../Assets/Bottles/yellow-card.png"
+import red_card from "../../assets/Bottles/red-card.png"
+import green_card from "../../assets/Bottles/green-card.png"
+import blue_card from "../../assets/Bottles/blue-card.png"
+import orange_card from "../../assets/Bottles/orange-card.png"
+import violet_card from "../../assets/Bottles/voilet-card.png"
+import yellow_card from "../../assets/Bottles/yellow-card.png"
 
-import red_swatch from "../../Assets/Variants/var_red.jpg"
-import green_swatch from "../../Assets/Variants/var_green.jpg"
-import blue_swatch from "../../Assets/Variants/var_blue.jpg"
-import orange_swatch from "../../Assets/Variants/var_orange.jpg"
-import violet_swatch from "../../Assets/Variants/var_purple.jpg"
-import yellow_swatch from "../../Assets/Variants/var_yellow.jpg"
+import red_swatch from "../../assets/Variants/var_red.jpg"
+import green_swatch from "../../assets/Variants/var_green.jpg"
+import blue_swatch from "../../assets/Variants/var_blue.jpg"
+import orange_swatch from "../../assets/Variants/var_orange.jpg"
+import violet_swatch from "../../assets/Variants/var_purple.jpg"
+import yellow_swatch from "../../assets/Variants/var_yellow.jpg"
 
 const variants = {
     red: {

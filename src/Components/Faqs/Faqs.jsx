@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useRef, useState } from 'react'
 import './faqs.css'
 import gsap from 'gsap'
 
-import logo_white from '../../Assets/images/logo_white.png'
+import logo_white from '../../assets/images/logo_white.png'
 import FaqItem from '../FaqItem/FaqItem'
 
 const faqs = [

@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useRef } from 'react'
 import './AboutStory.css'
-import story_img from '../../Assets/images/story_img.jpg'
+import story_img from '../../assets/images/story_img.jpg'
 import Counter from '../Counter/Counter'
 import gsap from 'gsap'
 
