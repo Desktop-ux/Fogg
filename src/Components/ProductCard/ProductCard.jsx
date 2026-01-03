@@ -1,12 +1,12 @@
 import React, { useLayoutEffect, useRef, useState } from 'react'
 import "./ProductCard.css"
 import gsap from 'gsap'
-import red_card from "../../assets/Bottles/red-card.png"
-import green_card from "../../assets/Bottles/green-card.png"
-import blue_card from "../../assets/Bottles/blue-card.png"
-import orange_card from "../../assets/Bottles/orange-card.png"
-import violet_card from "../../assets/Bottles/voilet-card.png"
-import yellow_card from "../../assets/Bottles/yellow-card.png"
+import red_card from "../../assets/Bottles/red-card.webp"
+import green_card from "../../assets/Bottles/green-card.webp"
+import blue_card from "../../assets/Bottles/blue-card.webp"
+import orange_card from "../../assets/Bottles/orange-card.webp"
+import violet_card from "../../assets/Bottles/purple-card.webp"
+import yellow_card from "../../assets/Bottles/yellow-card.webp"
 
 import red_swatch from "../../assets/Variants/var_red.jpg"
 import green_swatch from "../../assets/Variants/var_green.jpg"
