@@ -159,7 +159,7 @@ const ProductCard = () => {
     return (
         <div className='card'  style={{ "--accent": currentVarient.accent, "--badge-bg": currentVarient.badgeColor, }} >
             <div className="product" ref={cardref}>
-                <img src={currentVarient.cardimg} alt={currentVarient.name} loading='eager'/>
+                <img src={currentVarient.cardimg} alt={currentVarient.name} loading='lazy'/>
             </div>
             <div className="product_details"  >
                 <div className="details" ref={detailsref}>
