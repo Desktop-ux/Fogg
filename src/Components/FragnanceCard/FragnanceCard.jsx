@@ -31,7 +31,7 @@ const FragnanceCard = ({ name, descp, newPrice, oldPricw, category, fragImg, dot
                 </div>
             </div>
             <div className="frag_bottle">
-                <img src={fragImg} alt="" />
+                <img src={fragImg} alt="" loading='lazy' />
             </div>
             <div className="frag_detail">
                 <h2>{name}</h2> 
